@@ -104,6 +104,7 @@ G2L["c"] = Instance.new("ScrollingFrame", G2L["3"]);
 G2L["c"]["Active"] = true;
 G2L["c"]["BorderSizePixel"] = 0;
 G2L["c"]["CanvasSize"] = UDim2.new(0, 0, 1, 0);
+G2L["c"]["CanvasPosition"] = Vector2.new(0, 6);
 G2L["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["c"]["Size"] = UDim2.new(0, 144, 0, 116);
 G2L["c"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
@@ -458,6 +459,7 @@ local script = G2L["2b"];
 	local RageConn = nil
 	local ReturnConn = nil
 	local StaminaConn = nil
+	local SprintConn = nil
 	
 	-- // Tables
 	local TeleportsTable = {
@@ -543,12 +545,25 @@ local script = G2L["2b"];
 					StaminaConn = Character:GetAttributeChangedSignal("Stamina"):Connect(function()
 						Character:SetAttribute("Stamina", 100)
 					end)
+					
+					SprintConn = Character.Humanoid:GetAttributeChangedSignal("WalkSpeed"):Connect(function()
+						if _G.RageMode == true then return end
+						
+						if Character.Humanoid.WalkSpeed > 18 and Character:GetAttribute("Sprinting") == true then
+							Character.Humanoid.WalkSpeed = 27
+						end
+					end)
 				else
 					_G.InfStamina = false
 					
 					if StaminaConn ~= nil then
 						StaminaConn:Disconnect()
 						StaminaConn = nil
+					end
+					
+					if SprintConn ~= nil then
+						SprintConn:Disconnect()
+						SprintConn = nil
 					end
 				end
 			end,
