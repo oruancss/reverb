@@ -437,6 +437,7 @@ local script = G2L["29"];
 	
 	-- // Connections
 	local RageConn = nil
+	local ReturnConn = nil
 	
 	-- // Tables
 	local TeleportsTable = {
@@ -493,7 +494,7 @@ local script = G2L["29"];
 					_G.ReturnAlive = true
 					
 					local Player = Players.LocalPlayer.Character
-					Player.Humanoid:GetPropertyChangedSignal("Health"):Connect(function()
+					ReturnConn = Player.Humanoid:GetPropertyChangedSignal("Health"):Connect(function()
 						local Health = Player.Humanoid.Health
 						
 						if Health <= 15 then
@@ -502,6 +503,11 @@ local script = G2L["29"];
 					end)
 				else
 					_G.ReturnAlive = false
+					
+					if ReturnConn ~= nil then
+						ReturnConn:Disconnect()
+						ReturnConn = nil
+					end
 				end
 			end,
 		};
