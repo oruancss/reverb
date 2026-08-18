@@ -103,7 +103,7 @@ G2L["b"]["CornerRadius"] = UDim.new(0, 2);
 G2L["c"] = Instance.new("ScrollingFrame", G2L["3"]);
 G2L["c"]["Active"] = true;
 G2L["c"]["BorderSizePixel"] = 0;
-G2L["c"]["CanvasSize"] = UDim2.new(0, 0, 1.25, 0);
+G2L["c"]["CanvasSize"] = UDim2.new(0, 0, 1.3, 0);
 G2L["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["c"]["Size"] = UDim2.new(0, 144, 0, 116);
 G2L["c"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
@@ -339,90 +339,79 @@ G2L["26"] = Instance.new("UICorner", G2L["25"]);
 G2L["26"]["CornerRadius"] = UDim.new(0, 2);
 
 
--- StarterGui.Reverb.Top.Bg.ScrollingFrame.Visuals
-G2L["27"] = Instance.new("Folder", G2L["c"]);
-G2L["27"]["Name"] = [[Visuals]];
-
-
--- StarterGui.Reverb.Top.Bg.ScrollingFrame.Visuals.UIListLayout
-G2L["28"] = Instance.new("UIListLayout", G2L["27"]);
-G2L["28"]["Padding"] = UDim.new(0, 2);
-G2L["28"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-
-
 -- StarterGui.Reverb.Top.UIShadow
-G2L["29"] = Instance.new("UIShadow", G2L["2"]);
+G2L["27"] = Instance.new("UIShadow", G2L["2"]);
 
 
 
 -- StarterGui.Reverb.Top.Minus
-G2L["2a"] = Instance.new("ImageLabel", G2L["2"]);
-G2L["2a"]["Image"] = [[rbxassetid://6764432408]];
-G2L["2a"]["ImageRectSize"] = Vector2.new(50, 50);
-G2L["2a"]["Size"] = UDim2.new(0, 25, 0, 20);
-G2L["2a"]["BackgroundTransparency"] = 1;
-G2L["2a"]["ImageRectOffset"] = Vector2.new(100, 950);
-G2L["2a"]["Name"] = [[Minus]];
-G2L["2a"]["Position"] = UDim2.new(0.87083, 0, -0.04549, 0);
+G2L["28"] = Instance.new("ImageLabel", G2L["2"]);
+G2L["28"]["Image"] = [[rbxassetid://6764432408]];
+G2L["28"]["ImageRectSize"] = Vector2.new(50, 50);
+G2L["28"]["Size"] = UDim2.new(0, 25, 0, 20);
+G2L["28"]["BackgroundTransparency"] = 1;
+G2L["28"]["ImageRectOffset"] = Vector2.new(100, 950);
+G2L["28"]["Name"] = [[Minus]];
+G2L["28"]["Position"] = UDim2.new(0.87083, 0, -0.04549, 0);
 
 
 -- StarterGui.Reverb.Top.Minus.UIAspectRatioConstraint
-G2L["2b"] = Instance.new("UIAspectRatioConstraint", G2L["2a"]);
-G2L["2b"]["DominantAxis"] = Enum.DominantAxis.Height;
+G2L["29"] = Instance.new("UIAspectRatioConstraint", G2L["28"]);
+G2L["29"]["DominantAxis"] = Enum.DominantAxis.Height;
 
 
 -- StarterGui.Reverb.Top.TextLabel
-G2L["2c"] = Instance.new("TextLabel", G2L["2"]);
-G2L["2c"]["TextWrapped"] = true;
-G2L["2c"]["BorderSizePixel"] = 0;
-G2L["2c"]["TextSize"] = 14;
-G2L["2c"]["TextScaled"] = true;
-G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["2c"]["TextColor3"] = Color3.fromRGB(238, 238, 238);
-G2L["2c"]["BackgroundTransparency"] = 1;
-G2L["2c"]["Size"] = UDim2.new(0, 206, 0, 20);
-G2L["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2c"]["Text"] = [[Reverb]];
+G2L["2a"] = Instance.new("TextLabel", G2L["2"]);
+G2L["2a"]["TextWrapped"] = true;
+G2L["2a"]["BorderSizePixel"] = 0;
+G2L["2a"]["TextSize"] = 14;
+G2L["2a"]["TextScaled"] = true;
+G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["2a"]["TextColor3"] = Color3.fromRGB(238, 238, 238);
+G2L["2a"]["BackgroundTransparency"] = 1;
+G2L["2a"]["Size"] = UDim2.new(0, 206, 0, 20);
+G2L["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2a"]["Text"] = [[Reverb]];
 
 
 -- StarterGui.Reverb.Top.TextLabel.UIStroke
-G2L["2d"] = Instance.new("UIStroke", G2L["2c"]);
-G2L["2d"]["Thickness"] = 1.5;
-G2L["2d"]["Color"] = Color3.fromRGB(9, 22, 66);
+G2L["2b"] = Instance.new("UIStroke", G2L["2a"]);
+G2L["2b"]["Thickness"] = 1.5;
+G2L["2b"]["Color"] = Color3.fromRGB(9, 22, 66);
 
 
 -- StarterGui.Reverb.Top.Drag
-G2L["2e"] = Instance.new("LocalScript", G2L["2"]);
+G2L["2c"] = Instance.new("LocalScript", G2L["2"]);
 -- [ERROR] cannot convert Capabilities, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["2e"]["Sandboxed"] = true;
-G2L["2e"]["Name"] = [[Drag]];
+G2L["2c"]["Sandboxed"] = true;
+G2L["2c"]["Name"] = [[Drag]];
 
 
 -- StarterGui.Reverb.Top.Manager
-G2L["2f"] = Instance.new("LocalScript", G2L["2"]);
-G2L["2f"]["Name"] = [[Manager]];
+G2L["2d"] = Instance.new("LocalScript", G2L["2"]);
+G2L["2d"]["Name"] = [[Manager]];
 
 
 -- StarterGui.Reverb.Top.Close
-G2L["30"] = Instance.new("TextButton", G2L["2"]);
-G2L["30"]["BorderSizePixel"] = 0;
-G2L["30"]["TextSize"] = 14;
-G2L["30"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["30"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["30"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["30"]["ZIndex"] = 2;
-G2L["30"]["BackgroundTransparency"] = 1;
-G2L["30"]["Size"] = UDim2.new(0, 26, 0, 20);
-G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["30"]["Text"] = [[]];
-G2L["30"]["Name"] = [[Close]];
-G2L["30"]["Position"] = UDim2.new(0.87083, 0, 0, 0);
+G2L["2e"] = Instance.new("TextButton", G2L["2"]);
+G2L["2e"]["BorderSizePixel"] = 0;
+G2L["2e"]["TextSize"] = 14;
+G2L["2e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2e"]["ZIndex"] = 2;
+G2L["2e"]["BackgroundTransparency"] = 1;
+G2L["2e"]["Size"] = UDim2.new(0, 26, 0, 20);
+G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["Text"] = [[]];
+G2L["2e"]["Name"] = [[Close]];
+G2L["2e"]["Position"] = UDim2.new(0.87083, 0, 0, 0);
 
 
 -- StarterGui.Reverb.Top.Drag
-local function C_2e()
-local script = G2L["2e"];
+local function C_2c()
+local script = G2L["2c"];
 	local UserInputService = game:GetService("UserInputService")
 	
 	local gui = script.Parent
@@ -463,10 +452,10 @@ local script = G2L["2e"];
 		end
 	end)
 end;
-task.spawn(C_2e);
+task.spawn(C_2c);
 -- StarterGui.Reverb.Top.Manager
-local function C_2f()
-local script = G2L["2f"];
+local function C_2d()
+local script = G2L["2d"];
 	-- // Services
 	local Players = game:GetService("Players")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -490,6 +479,7 @@ local script = G2L["2f"];
 	local StaminaConn = nil
 	local SprintConn = nil
 	local SprintingConn = nil
+	local CharacterAddedConn = nil
 	
 	-- // Tables
 	local TeleportsTable = {
@@ -499,15 +489,209 @@ local script = G2L["2f"];
 		Gakumart = vector.create(-164, -264, 241);
 		SchoolFirstFloor = vector.create(178, -259, 155);
 		Void = vector.create(179, -346, 271);
-		
 		Sky = vector.create(184, -190, 270);
 	}
 	
+	-- // Methods
+	local function SetupInfStamina(Character)
+		if not _G.InfStamina then
+			return
+		end
+	
+		local Humanoid = Character:FindFirstChildOfClass("Humanoid")
+		if not Humanoid then
+			return
+		end
+	
+		if StaminaConn ~= nil then
+			StaminaConn:Disconnect()
+			StaminaConn = nil
+		end
+	
+		if SprintConn ~= nil then
+			SprintConn:Disconnect()
+			SprintConn = nil
+		end
+	
+		Character:SetAttribute("Stamina", 100)
+	
+		StaminaConn = Character:GetAttributeChangedSignal("Stamina"):Connect(function()
+			if not _G.InfStamina then
+				return
+			end
+	
+			Character:SetAttribute("Stamina", 100)
+		end)
+	
+		SprintConn = Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+			if not _G.InfStamina then
+				return
+			end
+	
+			if Character:GetAttribute("Sprinting") ~= true then
+				return
+			end
+	
+			if Humanoid.WalkSpeed <= 18 then
+				return
+			end
+	
+			Humanoid.WalkSpeed = 27
+		end)
+	end
+	
+	local function SetupRageMode(Character)
+		if not _G.RageMode then
+			return
+		end
+	
+		local Humanoid = Character:FindFirstChildOfClass("Humanoid")
+		if not Humanoid then
+			return
+		end
+	
+		local HumanoidRootPart = Character:FindFirstChild("HumanoidRootPart")
+		if not HumanoidRootPart then
+			return
+		end
+	
+		if RageConn ~= nil then
+			RageConn:Disconnect()
+			RageConn = nil
+		end
+	
+		for _, PointLight in pairs(HumanoidRootPart:GetChildren()) do
+			if PointLight:IsA("PointLight") and PointLight.Name == "HeraPoint" then
+				PointLight:Destroy()
+			end
+		end
+	
+		local PointLight = Instance.new("PointLight")
+		PointLight.Name = "HeraPoint"
+		PointLight.Brightness = 5
+		PointLight.Range = 25
+		PointLight.Color = Color3.new(1, 0, 0)
+		PointLight.Parent = HumanoidRootPart
+	
+		Humanoid.WalkSpeed = 40
+	
+		RageConn = Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+			if not _G.RageMode then
+				return
+			end
+	
+			if Humanoid.WalkSpeed == 40 then
+				return
+			end
+	
+			Humanoid.WalkSpeed = 40
+		end)
+	end
+	
+	local function SetupReturnAlive(Character)
+		if not _G.ReturnAlive then
+			return
+		end
+	
+		local Humanoid = Character:FindFirstChildOfClass("Humanoid")
+		if not Humanoid then
+			return
+		end
+	
+		if ReturnConn ~= nil then
+			ReturnConn:Disconnect()
+			ReturnConn = nil
+		end
+	
+		local Player = Players.LocalPlayer
+	
+		local function ReturnToSky()
+			if not _G.ReturnAlive then
+				return
+			end
+	
+			if not Character or not Character.Parent then
+				return
+			end
+	
+			local HumanoidRootPart = Character:FindFirstChild("HumanoidRootPart")
+			if not HumanoidRootPart then
+				return
+			end
+	
+			local Params = RaycastParams.new()
+			Params.FilterType = Enum.RaycastFilterType.Exclude
+			Params.FilterDescendantsInstances = {Character}
+	
+			local OldPosition = nil
+	
+			local Raycast = workspace:Raycast(
+				HumanoidRootPart.Position,
+				vector.create(0, -999, 0),
+				Params
+			)
+	
+			if Raycast and Raycast.Position then
+				OldPosition = Raycast.Position
+			end
+	
+			if OldPosition == nil then
+				return
+			end
+	
+			HumanoidRootPart.Position = TeleportsTable.Sky
+	
+			local RootAttachment = HumanoidRootPart:FindFirstChild("RootAttachment")
+			if not RootAttachment then
+				return
+			end
+	
+			local LinearVelocity = Instance.new("LinearVelocity")
+			LinearVelocity.Attachment0 = RootAttachment
+			LinearVelocity.RelativeTo = Enum.ActuatorRelativeTo.World
+			LinearVelocity.MaxForce = 900000
+			LinearVelocity.VectorVelocity = vector.create(0, 99999, 0)
+			LinearVelocity.Parent = HumanoidRootPart
+	
+			task.wait(5)
+	
+			if LinearVelocity and LinearVelocity.Parent then
+				LinearVelocity:Destroy()
+			end
+	
+			local NewCharacter = Player.Character
+			if not NewCharacter then
+				return
+			end
+	
+			local NewHumanoidRootPart = NewCharacter:FindFirstChild("HumanoidRootPart")
+			if not NewHumanoidRootPart then
+				return
+			end
+	
+			NewHumanoidRootPart.Position = OldPosition
+		end
+	
+		if Humanoid.Health <= 15 then
+			task.spawn(ReturnToSky)
+		end
+	
+		ReturnConn = Humanoid:GetPropertyChangedSignal("Health"):Connect(function()
+			if not _G.ReturnAlive then
+				return
+			end
+	
+			if Humanoid.Health > 15 then
+				return
+			end
+	
+			task.spawn(ReturnToSky)
+		end)
+	end
+	
 	local MainTable = {
 		AutoParry = {
-			
 			OnClick = function()
-				
 				if _G.AutoParry == false then
 					_G.AutoParry = true
 	
@@ -534,131 +718,42 @@ local script = G2L["2f"];
 					_G.AutoParry = false
 				end
 			end,
-			
+	
 		};
-		
+	
 		SuperDash = {
 			OnClick = function()
 				_G.SuperDash = not _G.SuperDash
 			end,
 		};
-		
+	
 		ReturnAlive = {
 			OnClick = function()
-				if _G.ReturnAlive == false then
-					_G.ReturnAlive = true
-	
-					local Player = Players.LocalPlayer
-					local Character = Player.Character
-					local Humanoid = Character.Humanoid
-	
-					local function ReturnToSky()
-						if not Character or not Character.Parent then
-							return
-						end
-	
-						local HumanoidRootPart = Character:FindFirstChild("HumanoidRootPart")
-						if not HumanoidRootPart then
-							return
-						end
-	
-						local Params = RaycastParams.new()
-						Params.FilterType = Enum.RaycastFilterType.Exclude
-						Params.FilterDescendantsInstances = {Character}
-	
-						local OldPosition = nil
-	
-						local Raycast = workspace:Raycast(HumanoidRootPart.Position, vector.create(0, -999, 0), Params)
-	
-						if Raycast and Raycast.Position then
-							OldPosition = Raycast.Position
-						end
-	
-						if OldPosition == nil then
-							return
-						end
-	
-						HumanoidRootPart.Position = TeleportsTable.Sky
-	
-						local RootAttachment = HumanoidRootPart:FindFirstChild("RootAttachment")
-						if not RootAttachment then
-							return
-						end
-	
-						local LinearVelocity = Instance.new("LinearVelocity")
-						LinearVelocity.Attachment0 = RootAttachment
-						LinearVelocity.RelativeTo = Enum.ActuatorRelativeTo.World
-						LinearVelocity.MaxForce = 900000
-						LinearVelocity.VectorVelocity = vector.create(0, 99999, 0)
-						LinearVelocity.Parent = HumanoidRootPart
-	
-						task.wait(6)
-	
-						if LinearVelocity and LinearVelocity.Parent then
-							LinearVelocity:Destroy()
-						end
-	
-						local NewCharacter = Player.Character
-	
-						if not NewCharacter then
-							return
-						end
-	
-						local NewHumanoidRootPart = NewCharacter:FindFirstChild("HumanoidRootPart")
-	
-						if not NewHumanoidRootPart then
-							return
-						end
-	
-						NewHumanoidRootPart.Position = OldPosition
-					end
-	
-					if Humanoid.Health <= 15 then
-						task.spawn(ReturnToSky)
-					end
-	
-					ReturnConn = Humanoid:GetPropertyChangedSignal("Health"):Connect(function()
-						if _G.ReturnAlive == false then
-							return
-						end
-	
-						if Humanoid.Health <= 15 then
-							task.spawn(ReturnToSky)
-						end
-					end)
-	
-				else
+				if _G.ReturnAlive then
 					_G.ReturnAlive = false
 	
 					if ReturnConn ~= nil then
 						ReturnConn:Disconnect()
 						ReturnConn = nil
 					end
+	
+					return
 				end
+	
+				_G.ReturnAlive = true
+	
+				local Character = Players.LocalPlayer.Character
+				if not Character then
+					return
+				end
+	
+				SetupReturnAlive(Character)
 			end,
 		};
-		
+	
 		InfStamina = {
 			OnClick = function()
-				if _G.InfStamina == false then
-					_G.InfStamina = true
-	
-					local Character = Players.LocalPlayer.Character
-					local Humanoid = Character.Humanoid
-	
-					Character:SetAttribute("Stamina", 100)
-	
-					StaminaConn = Character:GetAttributeChangedSignal("Stamina"):Connect(function()
-						Character:SetAttribute("Stamina", 100)
-					end)
-					
-					SprintConn = Character.Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
-						if Character:GetAttribute("Sprinting") == true and Character.Humanoid.WalkSpeed > 18 then
-							Character.Humanoid.WalkSpeed = 27
-						end
-					end)
-	
-				else
+				if _G.InfStamina then
 					_G.InfStamina = false
 	
 					if StaminaConn ~= nil then
@@ -675,54 +770,63 @@ local script = G2L["2f"];
 						SprintingConn:Disconnect()
 						SprintingConn = nil
 					end
+	
+					return
 				end
+	
+				_G.InfStamina = true
+	
+				local Character = Players.LocalPlayer.Character
+				if not Character then
+					return
+				end
+	
+				SetupInfStamina(Character)
 			end,
 		};
-		
+	
 		RageMode = {
 			OnClick = function()
-				if _G.RageMode == false then
-					_G.RageMode = true
-	
-					local Player = Players.LocalPlayer.Character
-	
-					local PointLight = Instance.new("PointLight")
-					PointLight.Name = "HeraPoint"
-					PointLight.Brightness = 5
-					PointLight.Range = 25
-					PointLight.Color = Color3.new(1, 0, 0)
-					PointLight.Parent = Player.HumanoidRootPart
-					
-					task.spawn(function()
-						local Character = Players.LocalPlayer.Character
-						
-						Character.Humanoid.WalkSpeed = 40
-						
-						RageConn = Character.Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
-							Character.Humanoid.WalkSpeed = 40
-						end)
-					end)
-				else
+				if _G.RageMode then
 					_G.RageMode = false
-					local Character = Players.LocalPlayer.Character
-					
+	
 					if RageConn ~= nil then
 						RageConn:Disconnect()
 						RageConn = nil
 					end
-					
-					Character.Humanoid.WalkSpeed = 12
 	
-					local Player = Players.LocalPlayer.Character
+					local Character = Players.LocalPlayer.Character
+					if not Character then
+						return
+					end
 	
-					for _, PointLight in pairs(Player.HumanoidRootPart:GetChildren()) do
+					local Humanoid = Character:FindFirstChildOfClass("Humanoid")
+					if Humanoid then
+						Humanoid.WalkSpeed = 12
+					end
+	
+					local HumanoidRootPart = Character:FindFirstChild("HumanoidRootPart")
+					if not HumanoidRootPart then
+						return
+					end
+	
+					for _, PointLight in pairs(HumanoidRootPart:GetChildren()) do
 						if PointLight:IsA("PointLight") and PointLight.Name == "HeraPoint" then
 							PointLight:Destroy()
 						end
 					end
-					
-					Player = nil
+	
+					return
 				end
+	
+				_G.RageMode = true
+	
+				local Character = Players.LocalPlayer.Character
+				if not Character then
+					return
+				end
+	
+				SetupRageMode(Character)
 			end,
 		};
 	}
@@ -735,7 +839,6 @@ local script = G2L["2f"];
 		Bg.Visible = not Bg.Visible
 	end)
 	
-	
 	-- // Functionalities
 	do
 		local Borders = workspace.Borders
@@ -744,31 +847,51 @@ local script = G2L["2f"];
 		TextChatService.ChatWindowConfiguration.Enabled = true
 	end
 	
+	-- // Character Added
+	do
+		CharacterAddedConn = Players.LocalPlayer.CharacterAdded:Connect(function(Character)
+			Character:WaitForChild("Humanoid")
+			Character:WaitForChild("HumanoidRootPart")
+	
+			if _G.InfStamina then
+				SetupInfStamina(Character)
+			end
+	
+			if _G.RageMode then
+				SetupRageMode(Character)
+			end
+	
+			if _G.ReturnAlive then
+				SetupReturnAlive(Character)
+			end
+		end)
+	end
+	
 	-- // Navigator Code
 	local Navigator = Bg.Nav
 	local ScrollingFrame = Bg.ScrollingFrame
 	
 	for _, Button in pairs(Navigator:GetChildren()) do
 		if Button:IsA("TextButton") then
-			
+	
 			Button.MouseButton1Click:Connect(function()
 				for _, OtherButtons in pairs(ScrollingFrame:GetDescendants()) do
 					if OtherButtons:IsA("TextButton") then
 						OtherButtons.Visible = false
 					end
 				end
-				
+	
 				local Target = ScrollingFrame:FindFirstChild(Button.Name)
-				
+	
 				for _, Buttons in pairs(Target:GetChildren()) do
 					if Buttons:IsA("TextButton") then
 						Buttons.Visible = true
 					end
 				end
-				
+	
 				Target = nil
 			end)
-			
+	
 		end
 	end
 	
@@ -776,7 +899,7 @@ local script = G2L["2f"];
 	do
 		for _, Button in pairs(ScrollingFrame.Main:GetChildren()) do
 			if Button:IsA("TextButton") then
-				
+	
 				Button.MouseButton1Click:Connect(function()
 					MainTable[Button.Name].OnClick()
 	
@@ -788,7 +911,7 @@ local script = G2L["2f"];
 						Button.Text = Button.Text:gsub("ON", "OFF")
 					end
 				end)
-				
+	
 			end
 		end
 	end
@@ -814,14 +937,14 @@ local script = G2L["2f"];
 				end)
 	
 			end
-		end	
+		end
 	end
 	
 	-- // Super Dash
 	do
 		UserInputService.InputBegan:Connect(function(Input, Chat)
 			if Chat then return end
-			
+	
 			if Input.KeyCode == Enum.KeyCode.C and _G.SuperDash == true then
 				local Character = Players.LocalPlayer.Character
 	
@@ -881,7 +1004,7 @@ local script = G2L["2f"];
 						Left = -Character.HumanoidRootPart.CFrame.RightVector;
 						Right = Character.HumanoidRootPart.CFrame.RightVector;
 					}
-					
+	
 					LinearVelocity.VectorVelocity = DashDirectionConfigs[Direction] * InitialForce
 					InitialForce -= 2
 					task.wait()
@@ -889,11 +1012,10 @@ local script = G2L["2f"];
 				until InitialForce <= 0
 	
 				LinearVelocity:Destroy()
-				
-			
+	
 			elseif Input.KeyCode == Enum.KeyCode.Z then
 				MainTable.AutoParry.OnClick()
-				
+	
 				local Button = ScrollingFrame.Main:FindFirstChild("AutoParry")
 				if Button then
 					local State = _G.AutoParry
@@ -908,6 +1030,6 @@ local script = G2L["2f"];
 		end)
 	end
 end;
-task.spawn(C_2f);
+task.spawn(C_2d);
 
 return G2L["1"], require;
