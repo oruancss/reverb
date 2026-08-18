@@ -460,6 +460,7 @@ local script = G2L["2b"];
 	local ReturnConn = nil
 	local StaminaConn = nil
 	local SprintConn = nil
+	local SprintingConn = nil
 	
 	-- // Tables
 	local TeleportsTable = {
@@ -538,32 +539,49 @@ local script = G2L["2b"];
 			OnClick = function()
 				if _G.InfStamina == false then
 					_G.InfStamina = true
-					
+	
 					local Character = Players.LocalPlayer.Character
+					local Humanoid = Character.Humanoid
+	
 					Character:SetAttribute("Stamina", 100)
-					
+	
 					StaminaConn = Character:GetAttributeChangedSignal("Stamina"):Connect(function()
 						Character:SetAttribute("Stamina", 100)
 					end)
-					
-					SprintConn = Character.Humanoid:GetAttributeChangedSignal("WalkSpeed"):Connect(function()
+	
+					local function UpdateSprintSpeed()
 						if _G.RageMode == true then return end
-						
-						if Character.Humanoid.WalkSpeed > 18 and Character:GetAttribute("Sprinting") == true then
-							Character.Humanoid.WalkSpeed = 27
+	
+						if Character:GetAttribute("Sprinting") == true and Humanoid.WalkSpeed > 18 then
+							Humanoid.WalkSpeed = 27
 						end
+					end
+	
+					SprintConn = Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+						UpdateSprintSpeed()
 					end)
+	
+					SprintingConn = Character:GetAttributeChangedSignal("Sprinting"):Connect(function()
+						UpdateSprintSpeed()
+					end)
+	
+					UpdateSprintSpeed()
 				else
 					_G.InfStamina = false
-					
+	
 					if StaminaConn ~= nil then
 						StaminaConn:Disconnect()
 						StaminaConn = nil
 					end
-					
+	
 					if SprintConn ~= nil then
 						SprintConn:Disconnect()
 						SprintConn = nil
+					end
+	
+					if SprintingConn ~= nil then
+						SprintingConn:Disconnect()
+						SprintingConn = nil
 					end
 				end
 			end,
