@@ -547,23 +547,28 @@ local script = G2L["2f"];
 			OnClick = function()
 				if _G.ReturnAlive == false then
 					_G.ReturnAlive = true
-					
-					local Character = Players.LocalPlayer.Character
 	
-					local Health = Character.Humanoid.Health
-					if Health <= 15 then
+					local Character = Players.LocalPlayer.Character
+					local Humanoid = Character.Humanoid
+	
+					local function ReturnToSky()
 						local Params = RaycastParams.new()
 						Params.FilterType = Enum.RaycastFilterType.Exclude
 						Params.FilterDescendantsInstances = {Character}
 	
-						local OldPosition = nil;
+						local OldPosition = nil
 	
-						local Raycast = workspace:Raycast(Character.HumanoidRootPart.Position, vector.create(0, -999, 0), Params)
+						local Raycast = workspace:Raycast(
+							Character.HumanoidRootPart.Position,
+							vector.create(0, -999, 0),
+							Params
+						)
+	
 						if Raycast and Raycast.Position then
 							OldPosition = Raycast.Position
 						end
 	
-						Player.HumanoidRootPart.Position = TeleportsTable.Sky
+						Character.HumanoidRootPart.Position = TeleportsTable.Sky
 	
 						local HumanoidRootPart = Character:FindFirstChild("HumanoidRootPart")
 						if not HumanoidRootPart then return end
@@ -575,68 +580,44 @@ local script = G2L["2f"];
 						LinearVelocity.Attachment0 = RootAttachment
 						LinearVelocity.RelativeTo = Enum.ActuatorRelativeTo.World
 						LinearVelocity.MaxForce = 900000
-						LinearVelocity.Parent = HumanoidRootPart
 						LinearVelocity.VectorVelocity = vector.create(0, 99999, 0)
+						LinearVelocity.Parent = HumanoidRootPart
 	
 						task.wait(5)
 	
-						if OldPosition == nil then 
-							return 
+						LinearVelocity:Destroy()
+	
+						if OldPosition == nil then
+							return
 						end
 	
-						Character.HumanoidRootPart.Position = OldPosition
-						return
-					end
-	
-					ReturnConn = Character.Humanoid:GetPropertyChangedSignal("Health"):Connect(function()
-						local Health = Character.Humanoid.Health
-						local Character = Players.LocalPlayer.Character
-	
-						if Health <= 15 then
-							local Params = RaycastParams.new()
-							Params.FilterType = Enum.RaycastFilterType.Exclude
-							Params.FilterDescendantsInstances = {Character}
-	
-							local OldPosition = nil;
-	
-							local Raycast = workspace:Raycast(Character.HumanoidRootPart.Position, vector.create(0, -999, 0), Params)
-							if Raycast and Raycast.Position then
-								OldPosition = Raycast.Position
-							end
-	
-							Player.HumanoidRootPart.Position = TeleportsTable.Sky
-	
-							local HumanoidRootPart = Character:FindFirstChild("HumanoidRootPart")
-							if not HumanoidRootPart then return end
-	
-							local RootAttachment = HumanoidRootPart:FindFirstChild("RootAttachment")
-							if not RootAttachment then return end
-	
-							local LinearVelocity = Instance.new("LinearVelocity")
-							LinearVelocity.Attachment0 = RootAttachment
-							LinearVelocity.RelativeTo = Enum.ActuatorRelativeTo.World
-							LinearVelocity.MaxForce = 900000
-							LinearVelocity.Parent = HumanoidRootPart
-							LinearVelocity.VectorVelocity = vector.create(0, 99999, 0)
-	
-							task.wait(5)
-	
-							if OldPosition == nil then 
-								return 
-							end
-	
+						if Character and Character.Parent and Character:FindFirstChild("HumanoidRootPart") then
 							Character.HumanoidRootPart.Position = OldPosition
 						end
+					end
+	
+					if Humanoid.Health <= 15 then
+						task.spawn(ReturnToSky)
+					end
+	
+					ReturnConn = Humanoid:GetPropertyChangedSignal("Health"):Connect(function()
+						if _G.ReturnAlive == false then
+							return
+						end
+	
+						if Humanoid.Health <= 15 then
+							task.spawn(ReturnToSky)
+						end
 					end)
+	
 				else
 					_G.ReturnAlive = false
-					
+	
 					if ReturnConn ~= nil then
 						ReturnConn:Disconnect()
 						ReturnConn = nil
 					end
 				end
-				
 			end,
 		};
 		
