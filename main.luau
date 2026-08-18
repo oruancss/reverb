@@ -548,24 +548,13 @@ local script = G2L["2b"];
 					StaminaConn = Character:GetAttributeChangedSignal("Stamina"):Connect(function()
 						Character:SetAttribute("Stamina", 100)
 					end)
-	
-					local function UpdateSprintSpeed()
-						if _G.RageMode == true then return end
-	
-						if Character:GetAttribute("Sprinting") == true and Humanoid.WalkSpeed > 18 then
-							Humanoid.WalkSpeed = 27
+					
+					SprintConn = Character.Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+						if Character:GetAttribute("Sprinting") == true and Character.Humanoid.WalkSpeed > 18 then
+							Character.Humanoid.WalkSpeed = 27
 						end
-					end
-	
-					SprintConn = Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
-						UpdateSprintSpeed()
 					end)
 	
-					SprintingConn = Character:GetAttributeChangedSignal("Sprinting"):Connect(function()
-						UpdateSprintSpeed()
-					end)
-	
-					UpdateSprintSpeed()
 				else
 					_G.InfStamina = false
 	
