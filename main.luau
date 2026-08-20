@@ -1052,7 +1052,7 @@ local script = G2L["39"];
 						end
 					end
 					
-					Character.Humanoid.PlatformStand = true 
+					Character.Humanoid.PlatformStand = false 
 					
 					Character = nil
 				end
@@ -1112,13 +1112,11 @@ local script = G2L["39"];
 	
 				local Target = ScrollingFrame:FindFirstChild(Button.Name)
 	
-				for _, Buttons in pairs(Target:GetChildren()) do
-					if Buttons:IsA("TextButton") or Button:IsA("TextBox") then
-						Buttons.Visible = true
+				for _, Element in pairs(Target:GetChildren()) do
+					if Element:IsA("TextButton") or Element:IsA("TextBox") then
+						Element.Visible = true
 					end
 				end
-	
-				Target = nil
 			end)
 	
 		end
