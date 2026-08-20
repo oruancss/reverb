@@ -50,7 +50,7 @@ G2L["6"]["TextSize"] = 14;
 G2L["6"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["6"]["BackgroundColor3"] = Color3.fromRGB(244, 129, 2);
 G2L["6"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["6"]["Size"] = UDim2.new(0, 52, 0, 16);
+G2L["6"]["Size"] = UDim2.new(1, 0, 0.13997, 0);
 G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["6"]["Text"] = [[Main]];
 G2L["6"]["Name"] = [[Main]];
@@ -68,7 +68,7 @@ G2L["8"]["TextSize"] = 14;
 G2L["8"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["8"]["BackgroundColor3"] = Color3.fromRGB(244, 129, 2);
 G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["8"]["Size"] = UDim2.new(0, 52, 0, 16);
+G2L["8"]["Size"] = UDim2.new(1, 0, 0.13997, 0);
 G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["8"]["Text"] = [[TPs]];
 G2L["8"]["Name"] = [[Teleports]];
@@ -87,7 +87,7 @@ G2L["a"]["TextSize"] = 14;
 G2L["a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["a"]["BackgroundColor3"] = Color3.fromRGB(244, 129, 2);
 G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["a"]["Size"] = UDim2.new(0, 52, 0, 16);
+G2L["a"]["Size"] = UDim2.new(1, 0, 0.13997, 0);
 G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["a"]["Text"] = [[Visuals]];
 G2L["a"]["Name"] = [[Visuals]];
@@ -106,7 +106,7 @@ G2L["c"]["TextSize"] = 14;
 G2L["c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["c"]["BackgroundColor3"] = Color3.fromRGB(244, 129, 2);
 G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["c"]["Size"] = UDim2.new(0, 52, 0, 16);
+G2L["c"]["Size"] = UDim2.new(1, 0, 0.13997, 0);
 G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["c"]["Text"] = [[OP]];
 G2L["c"]["Name"] = [[OP]];
@@ -488,63 +488,58 @@ G2L["35"]["Name"] = [[Minus]];
 G2L["35"]["Position"] = UDim2.new(0.87083, 0, -0.04549, 0);
 
 
--- StarterGui.Reverb.Top.Minus.UIAspectRatioConstraint
-G2L["36"] = Instance.new("UIAspectRatioConstraint", G2L["35"]);
-G2L["36"]["DominantAxis"] = Enum.DominantAxis.Height;
-
-
 -- StarterGui.Reverb.Top.TextLabel
-G2L["37"] = Instance.new("TextLabel", G2L["2"]);
-G2L["37"]["TextWrapped"] = true;
-G2L["37"]["BorderSizePixel"] = 0;
-G2L["37"]["TextSize"] = 14;
-G2L["37"]["TextScaled"] = true;
-G2L["37"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["37"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["37"]["TextColor3"] = Color3.fromRGB(238, 238, 238);
-G2L["37"]["BackgroundTransparency"] = 1;
-G2L["37"]["Size"] = UDim2.new(0.99517, 0, 1, 0);
-G2L["37"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["37"]["Text"] = [[Reverb]];
+G2L["36"] = Instance.new("TextLabel", G2L["2"]);
+G2L["36"]["TextWrapped"] = true;
+G2L["36"]["BorderSizePixel"] = 0;
+G2L["36"]["TextSize"] = 14;
+G2L["36"]["TextScaled"] = true;
+G2L["36"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["36"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["36"]["TextColor3"] = Color3.fromRGB(238, 238, 238);
+G2L["36"]["BackgroundTransparency"] = 1;
+G2L["36"]["Size"] = UDim2.new(0.99517, 0, 1, 0);
+G2L["36"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["36"]["Text"] = [[Reverb]];
 
 
 -- StarterGui.Reverb.Top.TextLabel.UIStroke
-G2L["38"] = Instance.new("UIStroke", G2L["37"]);
-G2L["38"]["Thickness"] = 1.5;
-G2L["38"]["Color"] = Color3.fromRGB(9, 22, 66);
+G2L["37"] = Instance.new("UIStroke", G2L["36"]);
+G2L["37"]["Thickness"] = 1.5;
+G2L["37"]["Color"] = Color3.fromRGB(9, 22, 66);
 
 
 -- StarterGui.Reverb.Top.Drag
-G2L["39"] = Instance.new("LocalScript", G2L["2"]);
+G2L["38"] = Instance.new("LocalScript", G2L["2"]);
 -- [ERROR] cannot convert Capabilities, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["39"]["Sandboxed"] = true;
-G2L["39"]["Name"] = [[Drag]];
+G2L["38"]["Sandboxed"] = true;
+G2L["38"]["Name"] = [[Drag]];
 
 
 -- StarterGui.Reverb.Top.Manager
-G2L["3a"] = Instance.new("LocalScript", G2L["2"]);
-G2L["3a"]["Name"] = [[Manager]];
+G2L["39"] = Instance.new("LocalScript", G2L["2"]);
+G2L["39"]["Name"] = [[Manager]];
 
 
 -- StarterGui.Reverb.Top.Close
-G2L["3b"] = Instance.new("TextButton", G2L["2"]);
-G2L["3b"]["BorderSizePixel"] = 0;
-G2L["3b"]["TextSize"] = 14;
-G2L["3b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["3b"]["ZIndex"] = 2;
-G2L["3b"]["BackgroundTransparency"] = 1;
-G2L["3b"]["Size"] = UDim2.new(0.1256, 0, 1, 0);
-G2L["3b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3b"]["Text"] = [[]];
-G2L["3b"]["Name"] = [[Close]];
-G2L["3b"]["Position"] = UDim2.new(0.87083, 0, 0, 0);
+G2L["3a"] = Instance.new("TextButton", G2L["2"]);
+G2L["3a"]["BorderSizePixel"] = 0;
+G2L["3a"]["TextSize"] = 14;
+G2L["3a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3a"]["ZIndex"] = 2;
+G2L["3a"]["BackgroundTransparency"] = 1;
+G2L["3a"]["Size"] = UDim2.new(0.1256, 0, 1, 0);
+G2L["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3a"]["Text"] = [[]];
+G2L["3a"]["Name"] = [[Close]];
+G2L["3a"]["Position"] = UDim2.new(0.87083, 0, 0, 0);
 
 
 -- StarterGui.Reverb.Top.Drag
-local function C_39()
-local script = G2L["39"];
+local function C_38()
+local script = G2L["38"];
 	local UserInputService = game:GetService("UserInputService")
 	
 	local gui = script.Parent
@@ -585,10 +580,10 @@ local script = G2L["39"];
 		end
 	end)
 end;
-task.spawn(C_39);
+task.spawn(C_38);
 -- StarterGui.Reverb.Top.Manager
-local function C_3a()
-local script = G2L["3a"];
+local function C_39()
+local script = G2L["39"];
 	-- // Services
 	local Players = game:GetService("Players")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -1147,12 +1142,23 @@ local script = G2L["3a"];
 				end)
 	
 			end
-			
+		end
+	end
+	
+	-- // OP Code
+	do
+		for _, Button in pairs(ScrollingFrame.OP:GetChildren()) do
 			if Button:IsA("TextBox") then
 				Button.FocusLost:Connect(function()
 					local Character = Players.LocalPlayer.Character
 					
 					Character:SetAttribute(Button.Name, Button.Text)
+				end)
+			end
+			
+			if Button:IsA("TextButton") then
+				Button.MouseButton1Click:Connect(function()
+					MainTable[Button.Name].OnClick()
 				end)
 			end
 		end
@@ -1272,6 +1278,6 @@ local script = G2L["3a"];
 		end)
 	end
 end;
-task.spawn(C_3a);
+task.spawn(C_39);
 
 return G2L["1"], require;
